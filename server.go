@@ -24,7 +24,7 @@ func (server *Server) Run() error {
 
 	for port, backend := range server.Backends {
 		mux := http.NewServeMux()
-		mux.HandleFunc("/_ping", HandlePing)
+		mux.HandleFunc(server.HealthCheck, HandleHealth)
 		mux.Handle("/", NewAuthHandler(ctx, backend, &server.AuthOptions))
 
 		eg.Go(func() error {

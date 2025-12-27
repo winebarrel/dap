@@ -11,8 +11,8 @@ import (
 	"github.com/gorilla/securecookie"
 )
 
-func HandlePing(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "pong")
+func HandleHealth(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "OK")
 }
 
 type AuthHandler struct {
