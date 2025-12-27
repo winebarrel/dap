@@ -41,6 +41,8 @@ $ curl --digest --user "john:hello" localhost:8081
 ...<title>Yahoo! JAPAN</title>...
 
 $ curl -c cookie.txt --digest --user "john:hello" localhost:8080
-$ curl -b cookie.txt "john:hello" localhost:8080
+$ curl -b cookie.txt localhost:8080
+...<title>Example Domain</title>...
+$ curl -b cookie.txt localhost:8080
 ...<title>Example Domain</title>...
 ```
