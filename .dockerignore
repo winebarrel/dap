@@ -1,0 +1,10 @@
+.dockerignore
+.git/
+.github/
+.gitignore
+*.json
+*.md
+*.yml
+Dockerfile
+LICENSE
+Makefile
