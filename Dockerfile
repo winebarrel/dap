@@ -1,0 +1,16 @@
+FROM golang:1.25 AS build
+
+WORKDIR /src
+COPY go.* /src/
+RUN go mod download
+
+COPY *.go /src/
+COPY cmd/dap/*.go /src/cmd/dap/
+ARG dap_VERSION
+RUN CGO_ENABLED=0 go build -o dap -ldflags "-X main.version=${DAP_VERSION}" ./cmd/dap
+
+FROM gcr.io/distroless/static
+
+COPY --from=build /src/dap /
+
+ENTRYPOINT ["/dap"]
