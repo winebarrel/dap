@@ -1,5 +1,7 @@
 # dap
 
+[![CI](https://github.com/winebarrel/dap/actions/workflows/ci.yml/badge.svg)](https://github.com/winebarrel/dap/actions/workflows/ci.yml)
+
 Digest authentication proxy that stores authentication information in a cookie.
 
 ## Usage
