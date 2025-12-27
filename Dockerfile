@@ -6,7 +6,7 @@ RUN go mod download
 
 COPY ./ /src/
 ARG DAP_VERSION
-RUN CGO_ENABLED=0 go build -o dap -ldflags "-X main.version=${DAP_VERSION}" ./cmd/dap
+RUN CGO_ENABLED=0 go build -o dap -ldflags "-X main.version=${DAP_VERSION#v}" ./cmd/dap
 
 FROM gcr.io/distroless/static
 
