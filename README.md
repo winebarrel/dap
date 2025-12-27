@@ -26,7 +26,7 @@ Flags:
 $ export DAP_COOKIE_HASH_KEY=my-secret
 $ export DAP_BACKENDS='8080=https://example.com;8081=https://www.yahoo.co.jp'
 $ export DAP_REALM=example.com
-# echo -n 'test:example.com:hello' | sha1sum
+# echo -n 'john:example.com:hello' | md5
 $ export DAP_USERS='john=b98e16cbc3d01734b264adba7baa3bf9'
 $ go run ./cmd/dap
 ```
