@@ -1,6 +1,7 @@
 package dap_test
 
 import (
+	"io"
 	"net/http"
 	"net/http/cookiejar"
 	"net/http/httptest"
@@ -37,22 +38,34 @@ func TestHandler_OK(t *testing.T) {
 		Jar:       jar,
 	}
 
-	// Digest auth
-	resp, err := client.Get(server.URL)
-	require.NoError(err)
-	assert.Equal(http.StatusOK, resp.StatusCode)
+	{
+		// Digest auth
+		resp, err := client.Get(server.URL)
+		require.NoError(err)
+		assert.Equal(http.StatusOK, resp.StatusCode)
+		body, _ := io.ReadAll(resp.Body)
+		assert.Contains(string(body), "<title>Example Domain</title>")
+		resp.Body.Close()
+	}
 
-	// Cookie auth
-	client.Transport = http.DefaultTransport
-	resp, err = client.Get(server.URL)
-	require.NoError(err)
-	assert.Equal(http.StatusOK, resp.StatusCode)
+	{
+		// Cookie auth
+		client.Transport = http.DefaultTransport
+		resp, err := client.Get(server.URL)
+		require.NoError(err)
+		assert.Equal(http.StatusOK, resp.StatusCode)
+		body, _ := io.ReadAll(resp.Body)
+		assert.Contains(string(body), "<title>Example Domain</title>")
+		resp.Body.Close()
+	}
 
-	// No cookie
-	client.Jar = nil
-	resp, err = client.Get(server.URL)
-	require.NoError(err)
-	assert.Equal(http.StatusUnauthorized, resp.StatusCode)
+	{
+		// No cookie
+		client.Jar = nil
+		resp, err := client.Get(server.URL)
+		require.NoError(err)
+		assert.Equal(http.StatusUnauthorized, resp.StatusCode)
+	}
 }
 
 func TestHandler_UnauthorizedUser(t *testing.T) {
