@@ -6,7 +6,7 @@ vet:
 	go vet ./...
 
 .PHONY: test
-vet:
+test:
 	go test -v ./...
 
 .PHONY: build
