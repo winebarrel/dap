@@ -101,7 +101,7 @@ func TestHandler_UnauthorizedPassword(t *testing.T) {
 	}
 
 	client := &http.Client{
-		Transport: dac.NewDigestTransport("johnx", "hello", http.DefaultTransport),
+		Transport: dac.NewDigestTransport("john", "wrongpassword", http.DefaultTransport),
 	}
 	resp, err := client.Get(server.URL)
 	require.NoError(err)
