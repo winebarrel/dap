@@ -45,7 +45,7 @@ func TestHandler_OK(t *testing.T) {
 		assert.Equal(http.StatusOK, resp.StatusCode)
 		body, _ := io.ReadAll(resp.Body)
 		assert.Contains(string(body), "<title>Example Domain</title>")
-		resp.Body.Close()
+		resp.Body.Close() //nolint:errcheck
 	}
 
 	{
@@ -56,7 +56,7 @@ func TestHandler_OK(t *testing.T) {
 		assert.Equal(http.StatusOK, resp.StatusCode)
 		body, _ := io.ReadAll(resp.Body)
 		assert.Contains(string(body), "<title>Example Domain</title>")
-		resp.Body.Close()
+		resp.Body.Close() //nolint:errcheck
 	}
 
 	{
