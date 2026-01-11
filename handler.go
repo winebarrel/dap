@@ -51,7 +51,7 @@ func NewAuthHandler(backend *url.URL, options *AuthOptions) http.Handler {
 func (h *AuthHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	cookie, err := r.Cookie(h.cookieName)
 
-	if cookie != nil || err == nil {
+	if cookie != nil && err == nil {
 		var authInfo auth.Info
 		err = h.sc.Decode(h.cookieName, cookie.Value, &authInfo)
 
