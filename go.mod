@@ -7,11 +7,11 @@ require (
 	github.com/abbot/go-http-auth v0.4.1-0.20230310155302-b2a0e3997b9a
 	github.com/alecthomas/kong v1.16.1
 	github.com/gorilla/securecookie v1.1.2
-	github.com/stretchr/testify v1.12.0
+	github.com/stretchr/testify v1.12.1
 	golang.org/x/sync v0.22.0
 )
 
 require (
+	go.yaml.in/yaml/v3 v3.0.5 // indirect
 	golang.org/x/crypto v0.52.0 // indirect
-	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
