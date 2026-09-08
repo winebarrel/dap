@@ -1,6 +1,6 @@
 module github.com/winebarrel/dap
 
-go 1.25.3
+go 1.26.0
 
 require (
 	github.com/Snawoot/go-http-digest-auth-client v1.1.3
@@ -8,7 +8,7 @@ require (
 	github.com/alecthomas/kong v1.16.1
 	github.com/gorilla/securecookie v1.1.2
 	github.com/stretchr/testify v1.12.1
-	golang.org/x/sync v0.22.0
+	golang.org/x/sync v0.23.0
 )
 
 require (
