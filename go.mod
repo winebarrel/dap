@@ -3,7 +3,7 @@ module github.com/winebarrel/dap
 go 1.26.0
 
 require (
-	github.com/Snawoot/go-http-digest-auth-client v1.1.3
+	github.com/Snawoot/go-http-digest-auth-client v1.1.4
 	github.com/abbot/go-http-auth v0.4.1-0.20230310155302-b2a0e3997b9a
 	github.com/alecthomas/kong v1.17.0
 	github.com/gorilla/securecookie v1.1.2

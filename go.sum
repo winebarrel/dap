@@ -1,5 +1,5 @@
-github.com/Snawoot/go-http-digest-auth-client v1.1.3 h1:Xd/SNBuIUJqotzmxRpbXovBJxmlVZOT19IZZdMdrJ0Q=
-github.com/Snawoot/go-http-digest-auth-client v1.1.3/go.mod h1:WiwNiPXTRGyjTGpBtSQJlM2wDPRRPpFGhMkMWpV4uqg=
+github.com/Snawoot/go-http-digest-auth-client v1.1.4 h1:zbp1FrtyVQQ79KSt1fvUSvIZmRgvUAcgs3dzq16Frz4=
+github.com/Snawoot/go-http-digest-auth-client v1.1.4/go.mod h1:LnnRoDNMzhJqq9mUs5y6zh2slqsjgR8kZTZbj0ZC0zw=
 github.com/abbot/go-http-auth v0.4.1-0.20230310155302-b2a0e3997b9a h1:EIyoOgXbgPYS3e+ztkLL5OiPCxHAu8gm517b6+0JwLc=
 github.com/abbot/go-http-auth v0.4.1-0.20230310155302-b2a0e3997b9a/go.mod h1:uTNVOLr085BLgMc4j+RCfKv0erLHtm6sxVoi/buPSTk=
 github.com/alecthomas/assert/v2 v2.11.0 h1:2Q9r3ki8+JYXvGsDyBXwH3LcJ+WK5D0gc5E8vS6K3D0=
